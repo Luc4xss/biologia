@@ -15,21 +15,21 @@ const fios = {
   nome: "FIOS DE CABELO",
   descricao:
     "Fios de cabelo encontrados próximos ao corpo, possíveis vestígios deixados durante o contato físico.",
-  icone: "/static/imgs/evidences/evidencia1.png",
+  icone: "/evidencia1.png",
 };
 
 const sangue = {
   nome: "AMOSTRA DE SANGUE",
   descricao:
     "Impressão digital identificada na cena, pode revelar quem esteve no local.",
-  icone: "/static/imgs/evidences/evidencia2.png",
+  icone: "/evidencia2.png",
 };
 
 const digital = {
   nome: "IMPRESSÃO DIGITAL",
   descricao:
     "Manchas de sangue espalhadas pelo local, indicam luta ou ferimento durante o crime.",
-  icone: "/static/imgs/evidences/evidencia3.png",
+  icone: "/evidencia3.png",
 };
 
 renderizar();
@@ -83,10 +83,7 @@ function renderizar() {
 
   // Geração da cena
 
-  scene.setAttribute(
-    "src",
-    `/static/imgs/scenes/Cena${Math.floor(Math.random() * 4) + 1}.png`
-  );
+  scene.setAttribute("src", `Cena${Math.floor(Math.random() * 4) + 1}.png`);
 
   // Geração das evidências
 
@@ -223,7 +220,7 @@ function acusarSuspeito(x) {
   } else {
     if (score == 0) {
       alert("VOCÊ PERDEU O JOGO!");
-      window.location.href = "start_screen.html";
+      window.location.href = "index.html";
     }
     score--;
     alert("VOCÊ ERROU!");
